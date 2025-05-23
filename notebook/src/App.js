@@ -3,23 +3,27 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        width: '97vw',
+        height: '90vh',
+        backgroundColor: 'black',
+        border: '2px solid green',
+        margin: '5vh auto',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <h1 style={{ fontFamily: 'Google Sans, sans-serif', fontSize: '3rem', color: 'white' }}>
+        Notebook
+      </h1>
+      <input type="text" placeholder="Search box" />
+      <button>Go</button>
     </div>
   );
 }
+
 
 export default App;
