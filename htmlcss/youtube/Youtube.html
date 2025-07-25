@@ -15,8 +15,7 @@
             margin: 0 0;
         }
         .thumbnail {
-            width: 300px;
-            display: block;
+            width: 100%;
         }
 
         .search-bar {
@@ -37,31 +36,29 @@
             line-height: 20px;
         }
 
-        .video-preview {
-            width: 300px;
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 15px;
+       
+
+        .video-info-grid {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+          
         }
+
         .channel-picture {
-            width: 50px;
-            height: 50px;
-            overflow: hidden;
-            display: inline-block;
+           
         }
         .profile-picture {
            width: 40px;
            border-radius: 50px;
+           
+           
         }
         .video-info {
-            width: 200px;
-            display: inline-block;
-            vertical-align: top;
-            margin-left: 10px;
+            
         }
         .thumbnail-row {
             margin-bottom: 12px;
-            width: 300px;
+            width: 100%;
             display: flex;
             justify-content: center;
         }
@@ -69,11 +66,19 @@
             font-size: 12px;
             color: rgb(96, 96, 96);
             margin-bottom: 4px;
+            display: inline-block;
            
         }
         .video-sats {
             font-size: 12px;
             color: rgb(96, 96, 96);
+            
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 16px;
+            row-gap: 40px;
         }
     </style>
 
@@ -81,15 +86,21 @@
 
     <body>
         <input class="search-bar" type="text" placeholder="Search">
+        <div class="video-grid">
+<div class="video-preview">
 
-
-        <div class="video-preview">
             <div class="thumbnail-row">
+
                 <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="Thumbnail 1">
+            
             </div>
-            <div>
+
+            <div class="video-info-grid">
+
                 <div class="channel-picture">
-                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg"></div>
+                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
+                </div>
+
                 <div class="video-info">
                     <p class="video-title">
                         Talking Tech and AI width Google's CEO Sundar Pichai</p>
@@ -98,6 +109,7 @@
                     <p class="video-sats">
                         3.4M views &#183; 6 months ago </p>
                 </div>
+
             </div>
         </div>
 
@@ -106,11 +118,11 @@
             <div class="thumbnail-row">
                 <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="Thumbnail 2">
             </div>
-            <div>
+            <div class="video-info-grid">
                 <div class="channel-picture">
                     <img class="profile-picture" src="channel-pictures/channel-2.jpeg"></div>
                 <div class="video-info">
-                    <p class="video-title">
+                      <p class="video-title">
                         Try Not To Laugh Challenge #9</p>
                     <p class="video-author"> 
                         Markiplier </p>
@@ -119,5 +131,100 @@
                 </div>
             </div>
         </div>
+
+        <div class="video-preview">
+
+            <div class="thumbnail-row">
+
+                <img class="thumbnail" src="thumbnails/thumbnail-3.webp" alt="Thumbnail 3">
+            
+            </div>
+
+            <div class="video-info-grid">
+
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-3.jpeg">
+                </div>
+
+                <div class="video-info">
+                    <p class="video-title">
+                        Crazy Tik Toks Taken Moments Before DISASTER
+                        </p>
+                    <p class="video-author"> 
+                        SSSniperWolf </p>
+                    <p class="video-sats">
+                        12M views · 1 year ago </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnails/thumbnail-4.webp" alt="Thumbnail 4">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-4.jpeg"></div>
+                <div class="video-info">
+                      <p class="video-title">
+                        The Simplest Math Problem No One Can Solve - Collatz Conjecture</p>
+                    <p class="video-author"> 
+                        Veritasium </p>
+                    <p class="video-sats">
+                        18M views · 4 months ago </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+
+            <div class="thumbnail-row">
+
+                <img class="thumbnail" src="thumbnails/thumbnail-5.webp" alt="Thumbnail 5">
+            
+            </div>
+
+            <div class="video-info-grid">
+
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-5.jpeg">
+                </div>
+
+                <div class="video-info">
+                    <p class="video-title">
+                        Kadane's Algorithm to Maximum Sum Subarray Problem</p>
+                    <p class="video-author"> 
+                        CS Dojo </p>
+                    <p class="video-sats">
+                        519K views · 5 years ago </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnails/thumbnail-6.webp" alt="Thumbnail 6">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-6.jpeg"></div>
+                <div class="video-info">
+                      <p class="video-title">
+                        Anything You Can Fit In The Circle I’ll Pay For</p>
+                    <p class="video-author"> 
+                        MrBeast </p>
+                    <p class="video-sats">
+                        141M views · 1 year ago </p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        
     </body>
 </head>
