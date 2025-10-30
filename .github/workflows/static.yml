@@ -1,7 +1,7 @@
 # .github/workflows/deploy.yml
-# Auto-deploy "htmlcss/youtube" to GitHub Pages on push
+# Automated GitHub Pages Deployment for your static site
 
-name: 🚀 Deploy YouTube Clone to GitHub Pages
+name: 🚀 Deploy static content to GitHub Pages
 
 on:
   push:
@@ -30,12 +30,13 @@ jobs:
 
       - name: ⚙️ Setup GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true   # 🔥 ensures GitHub Pages is enabled automatically
 
-      - name: 📦 Upload build files
+      - name: 📦 Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          # 👇 This uploads only your HTML project folder
-          path: 'htmlcss/youtube'
+          path: '.'          # You can change this to 'htmlcss/youtube' if you only want that folder deployed
 
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
