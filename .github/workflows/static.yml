@@ -1,7 +1,8 @@
 # .github/workflows/deploy.yml
-# Automated GitHub Pages Deployment for your static site
+# Smart Deployment Pipeline for GitHub Pages
+# Author: Swarag VS | Project: bricks-N-bonds
 
-name: 🚀 Deploy static content to GitHub Pages
+name: 🚀 Deploy YouTube Clone to GitHub Pages
 
 on:
   push:
@@ -31,12 +32,19 @@ jobs:
       - name: ⚙️ Setup GitHub Pages
         uses: actions/configure-pages@v5
         with:
-          enablement: true   # 🔥 ensures GitHub Pages is enabled automatically
+          enablement: true  # ✅ Automatically enables Pages if not configured
+
+      - name: 🏗️ Prepare deployment folder
+        run: |
+          mkdir deploy
+          cp -r htmlcss/youtube/* deploy/
+          # 👇 Rename Youtube.html → index.html for clean homepage access
+          mv deploy/Youtube.html deploy/index.html
 
       - name: 📦 Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'          # You can change this to 'htmlcss/youtube' if you only want that folder deployed
+          path: 'deploy'   # Upload only the prepared deployment directory
 
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
